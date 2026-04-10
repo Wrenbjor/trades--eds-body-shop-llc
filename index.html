@@ -398,9 +398,9 @@ footer a{color:var(--p);text-decoration:none}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function(){
-  var city='Vineland',state='NJ';
-  if(!city)return;
-  var q=encodeURIComponent(city+(state?', '+state:'')+', USA');
+  var geo='Vineland, NJ';
+  if(!geo)return;
+  var q=encodeURIComponent(geo+', USA');
   fetch('https://nominatim.openstreetmap.org/search?q='+q+'&format=json&limit=1')
     .then(function(r){return r.json();})
     .then(function(d){
